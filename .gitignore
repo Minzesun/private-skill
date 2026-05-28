@@ -1,0 +1,16 @@
+# local/editor/runtime noise
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+*.pyo
+*.log
+*.tmp
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.env
+node_modules/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Obsidian Paper KB"
+  short_description: "Zotero papers to Obsidian knowledge cards"
+  default_prompt: "Use $obsidian-paper-kb to read this Zotero paper and turn it into an Obsidian literature note and concept cards."

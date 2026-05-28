@@ -1,0 +1,3 @@
+display_name: HelloAgents Launcher
+short_description: Starts the local HelloAgents demo configured on this machine.
+default_prompt: Launch the local HelloAgents setup in the terminal.
