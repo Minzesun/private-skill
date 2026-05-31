@@ -1,0 +1,4 @@
+interface:
+  display_name: "Patent Write"
+  short_description: "Chinese patent DOCX formatting, Word grid, and structured patent drafting."
+  default_prompt: "Audit and revise a Chinese patent DOCX against the formal pre-review template, including Word docGrid, typography, paragraph settings, claims, specification structure, abstract, and figures."

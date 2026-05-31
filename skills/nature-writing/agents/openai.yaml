@@ -1,4 +1,4 @@
 interface:
   display_name: "Nature Writing"
-  short_description: "Draft manuscripts and Chinese academic DOCX formats"
-  default_prompt: "Help me turn my claims, results, figures, Chinese notes, or Chinese academic Word formatting needs into a clear manuscript section or thesis-style DOCX specification."
+  short_description: "Draft manuscripts and CSU/Chinese thesis DOCX formats"
+  default_prompt: "Help me turn my claims, results, figures, Chinese notes, or Chinese academic Word formatting needs into a clear manuscript section, dissertation structure, or Central South University thesis-style DOCX specification."

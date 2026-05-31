@@ -19,6 +19,10 @@ official template.
 If the user names a specific university, prefer that university's official
 current template over this preset.
 
+For Central South University / 中南大学 requests, use
+`csu-graduate-thesis-format.md`; its school-specific rules override this generic
+985-university preset.
+
 ## Page setup
 
 - Paper: A4.
@@ -31,9 +35,9 @@ current template over this preset.
 
 - Chinese body text: SimSun, 12 pt.
 - Latin letters and numbers in body text: Times New Roman, 12 pt.
-- Chinese headings: SimHei.
+- Chinese headings: SimHei, with no extra bold formatting.
 - Latin letters and numbers in headings: Times New Roman or Arial, matching the
-  document builder's available fonts.
+  document builder's available fonts, with no extra bold or italic formatting.
 - Equations: Cambria Math where available; otherwise Times New Roman-compatible
   math rendering.
 
@@ -56,12 +60,18 @@ Use real Word styles, not direct formatting.
 | Second-level section | Heading 3 | SimHei 13 pt, left aligned, exactly 20 pt line spacing, 12 pt before, 6 pt after |
 | Third-level section | Heading 4 | SimHei 12 pt, left aligned, exactly 20 pt line spacing, 12 pt before, 6 pt after |
 
+Do not apply an additional bold property to heading styles or heading runs; rely
+on SimHei for heading weight.
+Do not apply italic formatting to headings, subtitles, abstract headings, or
+their runs.
+
 Use Heading 4 sparingly. If the outline needs deeper nesting, ask whether the
 user wants a dissertation-style hierarchy or a shorter report-style hierarchy.
 
 ## Abstract
 
-- Abstract heading: SimHei 16 pt, centered, 24 pt before, 18 pt after.
+- Abstract heading: SimHei 16 pt, centered, 24 pt before, 18 pt after, with no
+  extra bold formatting.
 - Abstract body: SimSun 12 pt, justified, first-line indent 2 Chinese
   characters, exactly 20 pt line spacing.
 - Keywords: SimSun 12 pt. Use a visible label such as `关键词：`.
@@ -74,6 +84,16 @@ user wants a dissertation-style hierarchy or a shorter report-style hierarchy.
   centered, 12 pt before, 6 pt after.
 - Table body: SimSun 11 pt, Latin/numbers in Times New Roman, single spacing,
   3 pt before, 3 pt after.
+- For Chinese academic manuscripts, theses, reports, and paper-style tables,
+  default to a three-line table unless the target template explicitly requires
+  another style. Use real Word table borders: no vertical rules, no diagonal
+  rules, and no regular internal gridlines.
+- Three-line table rules: top rule 1.5 pt, header separator 0.75 pt, bottom
+  rule 1.5 pt. Use optional auxiliary horizontal rules no heavier than 0.75 pt
+  only for complex multi-level headers.
+- Put table captions above the table and table notes below the bottom rule.
+  Put units in column headers, keep decimal precision consistent within each
+  numeric column, and align short numeric/status fields deliberately.
 - Equations: centered, 12 pt, 6 pt before, 6 pt after. Put equation numbers at
   the right margin only if the document already uses numbered equations or the
   user requests them.

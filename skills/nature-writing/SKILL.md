@@ -1,8 +1,9 @@
 ---
 name: nature-writing
-description: Draft, restructure, or plan Nature-style manuscript sections from author-provided claims, results, figures, notes, Chinese drafts, or Chinese Word thesis/report formatting needs. Use when the user wants to write or rebuild an abstract, introduction, results narrative, discussion, conclusion, title, full manuscript argument, or Chinese academic DOCX style.
-version: 0.2.1
-author: Community contribution based on curated Nature/Nature Communications writing patterns and open research-writing notes
+description: Draft, restructure, or plan Nature-style manuscript sections from author-provided claims, results, figures, notes, Chinese drafts, or Chinese Word thesis/report formatting needs. Use when the user wants to write or rebuild an abstract, introduction, results narrative, discussion, conclusion, title, full manuscript argument, Chinese academic DOCX style, 985-university dissertation format, or a Central South University / 中南大学 graduate thesis template.
+metadata:
+  version: 0.2.2
+  author: Community contribution based on curated Nature/Nature Communications writing patterns and open research-writing notes
 ---
 
 # Nature-Style Scientific Writing
@@ -35,6 +36,7 @@ not merely polishing existing sentences.
 | [references/paper-review.md](references/paper-review.md) | Final manuscript self-review, rejection-risk audit, claim-evidence alignment, or reviewer-facing critique |
 | [references/chinese-author-workflow.md](references/chinese-author-workflow.md) | The user's notes are Chinese, mixed Chinese-English, or organized as lab notes rather than manuscript prose |
 | [references/chinese-word-thesis-format.md](references/chinese-word-thesis-format.md) | User asks for Chinese Word/DOCX formatting, Chinese doctoral thesis style, Chinese dissertation formatting, or a Chinese academic report template |
+| [references/csu-graduate-thesis-format.md](references/csu-graduate-thesis-format.md) | User asks for 中南大学, CSU, 中大研字〔2022〕8号, 中南大学研究生学位论文撰写规范, or a Central South University graduate thesis Word template |
 | [references/examples/index.md](references/examples/index.md) | You need concrete abstract, introduction, or method examples after choosing the relevant guide |
 
 ## Intake
@@ -67,6 +69,55 @@ drafting. You may still produce a scaffold with explicit placeholders.
 7. Run a paragraph-flow check: one paragraph, one message, with a clear first
    sentence and explicit sentence-to-sentence relation.
 8. Return prose plus concise notes on assumptions and missing inputs.
+
+## Formula writing and MathType output
+
+When drafting or building text that contains equations, first write the formula
+unit as prose plus convertible formula source, then decide the equation type
+before any DOCX/MathType conversion.
+
+- For English writing, use English academic prose for the equation lead-in,
+  equation body, and symbol explanation. Prefer patterns such as `... can be
+  expressed as:`, followed by the equation, then `where [symbol] denotes ...`.
+- For Chinese writing, use Chinese academic prose for the equation lead-in,
+  equation body, and symbol explanation. Prefer patterns such as `...表示为：`,
+  followed by the equation, then `式中 [符号]为...；[符号]为...`.
+- Inline formulas: use for variables, short expressions, and definitions inside
+  a sentence, such as `e`, `x`, `m`, `b`, `kx`, or `where \(e\) denotes...`.
+- Display formulas: use for ordinary standalone equations that aid readability
+  but are not central derivations and are unlikely to be cited later.
+- Right-numbered formulas: use for important models, governing equations, key
+  derivations, numbered assumptions, and any formula likely to be referenced
+  later in the manuscript or thesis.
+
+For DOCX/Word deliverables that require MathType, use the installed MathType
+Word commands to convert formula source into MathType objects:
+
+- Inline formulas must become inline MathType equations.
+- Display formulas must become display MathType equations.
+- Right-numbered formulas must become right-numbered MathType equations.
+- If a prose draft marks paragraph-level symbols with display delimiters, first
+  normalize them to MathType-compatible inline source such as `$e$` or `$x$`.
+- Verify converted objects are MathType OLE equations (`Equation.DSMT4`) before
+  claiming the document is ready.
+
+Example Chinese formula unit:
+
+```text
+根据双台阵系统的数据信息和力跟踪误差值，构建二阶阻抗模型，表示为：
+\[e = m\mathop x\limits^{..} + b\mathop x\limits^. + kx\]
+式中 \[e\]为力跟踪误差值；\[x\]为阻抗控制补偿量。
+```
+
+Equivalent English formula unit:
+
+```text
+Based on the data from the dual-table system and the force-tracking error, a
+second-order impedance model can be constructed as:
+\[e = m\mathop x\limits^{..} + b\mathop x\limits^. + kx\]
+where \[e\] denotes the force-tracking error and \[x\] denotes the impedance
+control compensation.
+```
 
 ## Section defaults
 
@@ -156,5 +207,19 @@ Default output:
 4. `Claim-evidence map:` for major claims, using `Claim: ... | Evidence: ... | Status: supported/needs evidence`.
 5. `Why this structure:` with `2-4` short bullets.
 
+When the output contains equations, preserve the selected language of the
+manuscript in the equation lead-in and symbol explanation. If the user requests
+a Word/DOCX deliverable with MathType, include the formula type decision
+(`inline`, `display`, or `right-numbered`) in the working notes until the
+formula has been converted and verified.
+
 For Chinese author notes, provide polished English first, then brief Chinese
 notes explaining major structural choices.
+
+For Chinese thesis/DOCX template requests, open the matching formatting
+reference before drafting or building. If the user names 中南大学 or provides the
+2022 CSU writing-standard PDF, use `references/csu-graduate-thesis-format.md`
+instead of the generic `chinese_phd_thesis_985` preset, and implement the
+school-specific typography, page geometry, front matter, running headers,
+page-number sections, captions, tables, references, optional medical sections,
+appendices, achievements, and acknowledgements.

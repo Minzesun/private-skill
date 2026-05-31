@@ -15,6 +15,8 @@ author-provided claims, figures, results, notes, or Chinese drafts.
 - conclusions
 - significance paragraphs
 - manuscript outlines
+- Chinese graduate-thesis Word/DOCX style specifications, including Central
+  South University thesis templates when the CSU standard is supplied
 
 It is for argument construction and section drafting. For sentence-level polish
 of an existing draft, use `nature-polishing`.
@@ -41,6 +43,7 @@ nature-writing/
     ├── abstract.md
     ├── article-architecture.md
     ├── chinese-author-workflow.md
+    ├── csu-graduate-thesis-format.md
     ├── conclusion.md
     ├── experiments.md
     ├── introduction.md
